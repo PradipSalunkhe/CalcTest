@@ -8,6 +8,7 @@
     <artifactId>calculator</artifactId>
     <version>1.0-SNAPSHOT</version>
 	<name>calctest</name>
+	<packaging>war</packaging>
 	
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,7 +26,29 @@
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
         </dependency>
+        
+        <dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-web</artifactId>
+		    <exclusions>
+		      <exclusion>
+		        <groupId>org.springframework.boot</groupId>
+		        <artifactId>spring-boot-starter-tomcat</artifactId>
+		      </exclusion>
+		    </exclusions>
+  		</dependency>
 		
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <scope>provided</scope>
+	 	 </dependency>
+		  <!-- Exclude any jul-to-slf4j -->
+		  <dependency>
+			    <groupId>org.slf4j</groupId>
+			    <artifactId>jul-to-slf4j</artifactId>
+			    <scope>provided</scope>
+		  </dependency>
     </dependencies>
 
     <properties>
