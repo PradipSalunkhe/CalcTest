@@ -1,2 +1,6 @@
 runtime: java
-instance_class: F4
+env: flex
+
+handlers:
+  - url: /.*
+    script: this field is required, but ignored
