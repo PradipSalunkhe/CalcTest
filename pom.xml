@@ -40,12 +40,6 @@
       <version>${appengine.target.version}</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>com.google.appengine</groupId>
-      <artifactId>appengine-api-stubs</artifactId>
-      <version>${appengine.target.version}</version>
-      <scope>test</scope>
-    </dependency>
 	
     </dependencies>
 
@@ -83,27 +77,12 @@
 			   <plugin>
         	<groupId>com.google.cloud.tools</groupId>
         	<artifactId>appengine-maven-plugin</artifactId>
-        	<version>${appengine-maven-plugin-version}</version>
+        	<version>1.3.2version>
       	</plugin>
         </plugins>
         
     </build>
 
-	<distributionManagement>
-		<repository>
-			<uniqueVersion>false</uniqueVersion>
-			<id>central</id>
-			<name>release</name>
-			<url>https://artifactory.veritas.com/artifactory/libs-release</url>
-			<layout>default</layout>
-		</repository>
-		<snapshotRepository>
-			<uniqueVersion>true</uniqueVersion>
-			<id>snapshots</id>
-			<name>snapshot</name>
-			<url>https://artifactory.veritas.com/artifactory/imp-auto-maven-snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
 	
 	<repositories>
 		<repository>
